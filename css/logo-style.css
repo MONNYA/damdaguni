@@ -1,0 +1,397 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #fff;
+  font-size: 16px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle; /* 수직으로 중앙에 정렬, 이미지와 텍스트 */
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.header-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.logo {
+  position: relative;
+  width: 200px;
+  height: 100%;
+}
+.logo a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.logo img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.logo a:hover {
+  opacity: 0.5;
+}
+
+/* menu */
+.menu {
+  position: relative;
+  width: 800px;
+  height: 100%;
+  display: flex;
+}
+
+/* navi */
+.navi {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  display: flex;
+}
+.navi > li {
+  position: relative;
+}
+.navi > li > a {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  transition: all;
+}
+.navi > li > a:hover {
+  border-bottom: solid 2px rgb(50, 165, 140);
+  font-weight: 900;
+}
+/* submenu-1 */
+.submenu-1 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s;
+}
+.submenu-1 li {
+  position: relative;
+}
+.submenu-1 a {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.navi > li:hover .submenu-1 {
+  height: 120px;
+  z-index: 2;
+}
+
+.submenu-1 a:hover {
+  background-color: rgb(50, 165, 140);
+  font-weight: bold;
+  color: #fff;
+}
+
+/* submenu-2 */
+.submenu-2 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s;
+}
+.submenu-2 li {
+  position: relative;
+}
+.submenu-2 a {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.navi > li:hover .submenu-2 {
+  height: 160px;
+  z-index: 2;
+}
+
+.submenu-2 a:hover {
+  background-color: rgb(50, 165, 140);
+  font-weight: bold;
+  color: #fff;
+}
+/* submenu-3 */
+.submenu-3 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.2s;
+}
+.submenu-3 li {
+  position: relative;
+}
+.submenu-3 a {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.navi > li:hover .submenu-3 {
+  height: 120px;
+  z-index: 2;
+}
+
+.submenu-3 a:hover {
+  background-color: rgb(50, 165, 140);
+  font-weight: bold;
+  color: #fff;
+}
+
+/* h-but */
+.h-but a {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  padding: 5px 15px;
+  border: solid 1px rgb(50, 165, 140);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+}
+
+.h-but > a:hover {
+  background-color: rgb(50, 165, 140);
+  font-weight: 900;
+  color: #fff;
+  transform: scale(1.1); /* 요소를 1.1배 확대 */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); /* 호버 시 그림자 효과 추가 */
+}
+/* hamburger */
+.hamburger {
+  position: relative;
+  top: 10%;
+  right: 10px;
+  flex-direction: column;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+}
+
+/* main */
+main {
+  position: relative;
+  width: 100%;
+}
+
+/* sub-but */
+.sub-but {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background-color: rgb(50, 165, 140);
+}
+.sub-but > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.brand span {
+  width: 100px;
+  margin-left: 100px;
+  margin-right: 20px;
+  padding: 8px 5px;
+  border: 1px solid #fff;
+  font-weight: 900;
+  color: #fff;
+  border-radius: 100px;
+}
+.brandmenu .strok {
+  width: 1px;
+  height: 50px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255);
+}
+
+/* h-but
+.h-but a {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border: solid 1px rgb(50, 165, 140);
+    padding: 5px 15px;
+    border-radius: 50px;
+  }
+  
+  .h-but > a:hover {
+    background-color: rgb(50, 165, 140);
+    color: #fff;
+    font-weight: 900;
+  } */
+
+.brandmenu .but-brand,
+.brandmenu .but-logo,
+.brandmenu .but-place {
+  width: 150px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.brandmenu .but-brand a,
+.brandmenu .but-logo a,
+.brandmenu .but-place a {
+  width: 100%; /* 링크 요소의 너비를 부모 요소에 맞춤 */
+  height: 50px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px; /* 텍스트를 수직 가운데 정렬하기 위해 높이와 동일한 값으로 설정 */
+}
+
+.brandmenu .but-brand a.hovered,
+.brandmenu .but-logo a.hovered,
+.brandmenu .but-place a.hovered {
+  background-color: rgba(255, 60, 20, 1); /* 호버된 상태의 배경색 */
+  font-weight: 900;
+  color: #fff;
+}
+
+/* footer */
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgb(37, 28, 8);
+  border-bottom: 1px solid #333;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bt-logo {
+  position: relative;
+  padding: 50px;
+}
+.info {
+  position: relative;
+  padding: 20px;
+}
+.info > div {
+  color: #fff;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+#copy {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
+}
+
+.sns {
+  position: relative;
+  display: flex;
+  padding: 50px;
+  gap: 10px;
+}
+
+.sns a {
+  display: inline-block; /* 인라인 블록 설정 */
+}
+
+.sns img {
+  display: block; /* 이미지 블록 설정 */
+  width: 40px; /* 이미지 너비 설정 */
+  height: auto; /* 이미지 비율 유지 */
+  border-radius: 5px; /* 이미지 모서리를 둥글게 설정 */
+  transition: transform ease; /* 호버 애니메이션 효과 설정 */
+}
+
+.sns img:hover {
+  transform: scale(1.1); /* 호버 시 이미지 확대 */
+}

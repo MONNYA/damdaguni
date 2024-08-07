@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이콘 토글 기능</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/51153cda5c.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .icon {
+        font-size: 100px;
+      }
+      .iconbox {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        background-color: #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="iconbox">
+      <i class="fa-solid icon" style="color: #e5156f"></i>
+    </div>
+
+    <script>
+      $(function () {
+        $(".iconbox").on("click", function () {
+          const icon = $(this).find("i");
+          if (icon.hasClass("fa-heart")) {
+            icon.removeClass("fa-heart");
+            icon.addClass("fa-heart-o");
+          } else {
+            icon.removeClass("fa-heart-o");
+            icon.addClass("fa-heart");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
