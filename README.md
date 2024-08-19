@@ -1,6 +1,6 @@
 # PORTFOLIO
 
-[🍊사이트 바로가기 링크🍊](https://damdaguni-monnya.vercel.app/)
+[🍊사이트 바로가기🍊](https://damdaguni-monnya.vercel.app/)
 <br><br>
 
 <div align= "center">
